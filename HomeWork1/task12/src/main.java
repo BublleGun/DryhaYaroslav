@@ -11,31 +11,17 @@ public class main {
 
     public static void main(String[] args) throws IOException {
         num = scr.nextInt();
+        int d = 0;
 
-        if(num > 0 && num < 99999)
+        while(num != 0)
         {
-            if (((num/1000)%10)%2==0)
+            if((num % 10) % 2 == 0)
                 a++;
             else
                 b++;
 
-            if (((num/100)%10)%2==0)
-                a++;
-            else
-                b++;
-            if (((num/10)%10)%2==0)
-                a++;
-            else
-                b++;
-            if (((num/1)%10)%2==0)
-                a++;
-            else
-                b++;
-        }else
-        {
-            System.out.println("Слишком большое число!!!");
+            num /= 10;
         }
-
 
         System.out.println("Even: " + a + " Odd: " + b);
     }
